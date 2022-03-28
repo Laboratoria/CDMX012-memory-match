@@ -1,24 +1,12 @@
-// import webdevCard from './components/App.js';
-import webdev from './data/webdev/webdev.js';
+import { pokemonCard } from './components/App.js';
+document.getElementById('cards').appendChild(pokemonCard());
 
-const webdev1 = webdev.items;
-const webdev2 = webdev.items;
-let webdevJoin= webdev1.concat(webdev2);
-let images = []
-webdevJoin.forEach(element => images.push(element.image));
-images.sort(function(){return Math.random() - 0.5 });
+let pokeballs = document.getElementsByClassName('pokeball');
+console.log(pokeballs);
 
-const webdevCard = () => {
-  const image = document.createElement('div');
-  image.className = 'cards-conteiner';
-  for(let i=0; i <images.length; i++){
-    image.innerHTML += `<img src="${images[i]}" class="image">`;
-  }
-  console.log(image);
-  return image;
-};
-
-document.getElementById('root').appendChild(webdevCard());
-
-// document.getElementById('root').appendChild(App());
-
+Array.from(pokeballs).forEach(element=>{
+  element.addEventListener("click", () => {
+    console.log(element);
+    element.style.visibility = "hidden";
+  })
+})

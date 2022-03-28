@@ -1,15 +1,21 @@
 body{
-    margin: 20px 20px 10px 20px;
+    /* -webkit-perspective: 1000; */
+    margin: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.342);
 }
 header{
     font-size: 80px;
     text-align: center;
+    width: 100%;
+    background-color: rgba(8, 8, 185, 0.377);
+    margin-bottom: 50px;
 }
 .cards-conteiner{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,8 +24,8 @@ header{
     flex-wrap: wrap;
 }
 .image{
-    width: 130px;
-    margin: 5px 30px;
+    width: 110px;
+    margin: 50px 50px;
 }
 button{
     width: 100px;
@@ -27,4 +33,17 @@ button{
     border-radius: 10px;
     font-size: 20px;
     margin-right: 80px;
+}
+.pokeballs{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+.pokeball{
+    margin: 25px 25px;
+    width: 160px;
 }
