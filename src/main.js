@@ -1,3 +1,2 @@
-import App from './components/App.js';
-
-document.getElementById('root').appendChild(App());
+import { pokemonCard } from './components/App.js';
+document.getElementById('cards').appendChild(pokemonCard());
